@@ -1,3 +1,4 @@
+// Aula 1
 // Calculadora IMC
 console.log("Calculadora IMC")
 
@@ -13,6 +14,8 @@ let calcImc = pesoNumber / (alturaNumber * alturaNumber)
 //console.log("Resultado",calcImc)
 
 
+
+// Aula 2
 if (calcImc < 17){
     alert("Você está muito abaixo do peso")
     }
