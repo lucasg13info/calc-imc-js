@@ -1,21 +1,15 @@
-// Aula 1
+// Aula 1 - Entrada de dados
 // Calculadora IMC
-console.log("Calculadora IMC")
 
 let peso = prompt("Informe qual seu peso (KG)")
 let pesoNumber = parseFloat(peso)
-//console.log(pesoNumber)
 
 let altura = prompt("Informe sua altura (Cm ex: 180)")
 let alturaNumber = parseFloat(altura /100)
-//console.log(alturaNumber)
 
 let calcImc = pesoNumber / (alturaNumber * alturaNumber)
-//console.log("Resultado",calcImc)
 
-
-
-// Aula 2
+// Aula 2 - Condicionais
 if (calcImc < 17){
     alert("Você está muito abaixo do peso")
     }
