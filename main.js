@@ -1,28 +1,63 @@
-// Aula 1 - Entrada de dados
-// Calculadora IMC
+//Array de objetos
+let carros = [
+    { 
+    id: 1,
+    modeloCarro: "Gol G5", 
+    anoFabricacao: "2023", 
+    marca: "Volkswagen",
+    preco: 20000,
+    },
+    { 
+    id: 2,
+    modeloCarro: "Argo ", 
+    anoFabricacao: "2019", 
+    marca: "Fiat",
+    preco: 54000,
+    },
+    { 
+    id: 3,
+    modeloCarro: "Zafira", 
+    anoFabricacao: "2012", 
+    marca: "Chevrolet",
+    preco: 39900,
+    },
+    { 
+    id: 4,
+    modeloCarro: "Creta", 
+    anoFabricacao: "2017", 
+    marca: "Hyundai",
+    preco: 83000,
+    },
+    { 
+    id: 5,
+    modeloCarro: "Polo", 
+    anoFabricacao: "2018", 
+    marca: "Volkswagen",
+    preco: 74000,
+    }
+]
 
-let peso = prompt("Informe qual seu peso (KG)")
-let pesoNumber = parseFloat(peso)
+//Ordenação SORT
 
-let altura = prompt("Informe sua altura (Cm ex: 180)")
-let alturaNumber = parseFloat(altura /100)
+//Colocando os carros em ordem Alfabética:
+carros.sort(function(a,b) {
+    if(a.modeloCarro <b.modeloCarro){
+        return -1;
+    }else {
+        return true;
+    }
+})
 
-let calcImc = pesoNumber / (alturaNumber * alturaNumber)
+console.log(carros)
 
-// Aula 2 - Condicionais
-if (calcImc < 17){
-    alert("Você está muito abaixo do peso")
+
+
+//Colocando os carros de valor, mais barato na frente:
+carros.sort(function(a,b) {
+    if(a.preco < b.preco){
+        return -1;
+    }else {
+        return true;
     }
-    else if (calcImc > 17 && calcImc <= 18.49){
-        alert("Você está abaixo do peso")
-    }
-    else if (calcImc > 18.5 && calcImc <= 29.99){
-        alert("Você está com sobrepeso")
-    }
-    else if (calcImc >=30 && calcImc <= 34.99){
-        alert("Você está em Obesidade 1")
-    }
-    else{
-        alert("Você está em Obesidade 2")
-    }
-        
+})
+console.log(carros)
